@@ -1,6 +1,6 @@
 **INFINITE AGENTIC LOOP COMMAND**
 
-Think deeply about this infinite generation task. You are about to embark on a sophisticated iterative creation process.
+Think deeply about this infinite generation task. You are about to embark on a sophisticated iterative creation process using MistralAI's parallel processing capabilities.
 
 **Variables:**
 
@@ -38,27 +38,27 @@ Based on the spec analysis and existing iterations:
 - Consider how to build upon previous iterations while maintaining novelty
 - If count is "infinite", prepare for continuous generation until context limits
 
-**PHASE 4: PARALLEL AGENT COORDINATION**
-Deploy multiple Sub Agents to generate iterations in parallel for maximum efficiency and creative diversity:
+**PHASE 4: PARALLEL AGENT COORDINATION WITH MISTRALAI**
+Deploy multiple MistralAI instances to generate iterations in parallel for maximum efficiency and creative diversity:
 
-**Sub-Agent Distribution Strategy:**
-- For count 1-5: Launch all agents simultaneously 
+**MistralAI Agent Distribution Strategy:**
+- For count 1-5: Launch all agents simultaneously using MistralAI's parallel processing
 - For count 6-20: Launch in batches of 5 agents to manage coordination
 - For "infinite": Launch waves of 3-5 agents, monitoring context and spawning new waves
 
 **Agent Assignment Protocol:**
-Each Sub Agent receives:
+Each MistralAI Agent receives:
 1. **Spec Context**: Complete specification file analysis
 2. **Directory Snapshot**: Current state of output_dir at launch time
 3. **Iteration Assignment**: Specific iteration number (starting_number + agent_index)
 4. **Uniqueness Directive**: Explicit instruction to avoid duplicating concepts from existing iterations
 5. **Quality Standards**: Detailed requirements from the specification
 
-**Agent Task Specification:**
+**MistralAI Agent Task Specification:**
 ```
 TASK: Generate iteration [NUMBER] for [SPEC_FILE] in [OUTPUT_DIR]
 
-You are Sub Agent [X] generating iteration [NUMBER]. 
+You are MistralAI Agent [X] generating iteration [NUMBER]. 
 
 CONTEXT:
 - Specification: [Full spec analysis]
@@ -78,7 +78,7 @@ DELIVERABLE: Single file as specified, with unique innovative content
 ```
 
 **Parallel Execution Management:**
-- Launch all assigned Sub Agents simultaneously using Task tool
+- Launch all assigned MistralAI Agents simultaneously using create_and_run_task tool
 - Monitor agent progress and completion
 - Handle any agent failures by reassigning iteration numbers
 - Ensure no duplicate iteration numbers are generated
@@ -100,7 +100,7 @@ WHILE context_capacity > threshold:
     1. Assess current output_dir state
     2. Plan next wave of agents (size based on remaining context)
     3. Assign increasingly sophisticated creative directions
-    4. Launch parallel Sub Agent wave
+    4. Launch parallel MistralAI Agent wave
     5. Monitor wave completion
     6. Update directory state snapshot
     7. Evaluate context capacity remaining
@@ -115,7 +115,7 @@ WHILE context_capacity > threshold:
 - **Wave N**: Revolutionary concepts pushing the boundaries of the specification
 
 **Context Optimization:**
-- Each wave uses fresh agent instances to avoid context accumulation
+- Each wave uses fresh MistralAI agent instances to avoid context accumulation
 - Main orchestrator maintains lightweight state tracking
 - Progressive summarization of completed iterations to manage context
 - Strategic pruning of less essential details in later waves
@@ -129,7 +129,7 @@ WHILE context_capacity > threshold:
 - Ensure proper file organization and naming
 
 **Parallel Coordination:**
-- Deploy Sub Agents strategically to maximize creative diversity
+- Deploy MistralAI Agents strategically to maximize creative diversity
 - Assign distinct innovation dimensions to each agent to avoid overlap
 - Coordinate timing to prevent file naming conflicts
 - Monitor all agents for successful completion and quality
@@ -141,7 +141,7 @@ WHILE context_capacity > threshold:
 - Balance parallel speed with quality and coordination overhead
 
 **Agent Management:**
-- Provide each Sub Agent with complete context and clear assignments
+- Provide each MistralAI Agent with complete context and clear assignments
 - Handle agent failures gracefully with iteration reassignment
 - Ensure all parallel outputs integrate cohesively with the overall progression
 
@@ -155,7 +155,7 @@ Before beginning generation, engage in extended thinking about:
 - How to balance consistency with innovation
 
 **Parallel Strategy:**
-- Optimal Sub Agent distribution for the requested count
+- Optimal MistralAI Agent distribution for the requested count
 - How to assign distinct creative directions to maximize diversity
 - Wave sizing and timing for infinite mode
 - Context management across multiple parallel agents
@@ -178,4 +178,4 @@ Before beginning generation, engage in extended thinking about:
 - Managing context window limits across the entire system
 - Maintaining specification compliance across all parallel outputs
 
-Begin execution with deep analysis of these parallel coordination challenges and proceed systematically through each phase, leveraging Sub Agents for maximum creative output and efficiency.
+Begin execution with deep analysis of these parallel coordination challenges and proceed systematically through each phase, leveraging MistralAI Agents for maximum creative output and efficiency.

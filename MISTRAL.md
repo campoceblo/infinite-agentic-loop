@@ -1,20 +1,27 @@
 # MISTRAL.md
 
-This file provides guidance to MistralAI Code when working with code in this repository.
+This file provides guidance when working with code in this repository.
+
+⚠️ **Important Note**: This project was conceptually migrated from Claude Code to demonstrate the infinite agentic loop pattern. The real [Mistral Code](https://mistral.ai/products/mistral-code) is an IDE extension (not a command-line tool). See `HOW_TO_GET_MISTRAL_CODE.md` for information about the actual Mistral Code product.
 
 ## Project Overview
 
-This is an experimental project demonstrating the Infinite Agentic Loop pattern using MistralAI's custom coding interface. The project orchestrates multiple AI agents in parallel to generate evolving iterations of themed hybrid UI components based on specifications.
+This is an experimental project demonstrating the Infinite Agentic Loop pattern. The project orchestrates multiple AI agents in parallel to generate evolving iterations of themed hybrid UI components based on specifications.
+
+**Note**: This was originally designed for Claude Code's custom slash commands. The migration to "MistralAI Code" is conceptual - to use this with real MistralAI products, you would need to adapt it to work with their IDE extensions and APIs.
 
 ## Key Commands
 
 ### Running the Infinite Agentic Loop
 
+**Note**: The commands below are conceptual. The real Mistral Code is an IDE extension, not a command-line tool.
+
 ```bash
+# This is conceptual - real Mistral Code works in your IDE
 mistral-code
 ```
 
-Then use the `/project:infinite` command with these variants:
+Conceptual command variants (would need adaptation for real Mistral Code APIs):
 
 ```bash
 # Single generation
@@ -33,10 +40,14 @@ Then use the `/project:infinite` command with these variants:
 ## Architecture & Structure
 
 ### Command System
-The project uses MistralAI Code's custom commands feature:
+**Note**: This configuration is conceptual. Real Mistral Code uses IDE extensions.
+
+The project conceptually uses custom commands:
 - `.mistral/commands/infinite.md` - Main infinite loop orchestrator command
-- `.mistral/commands/prime.md` - Additional command (if present)
-- `.mistral/settings.json` - Permissions configuration allowing Write, MultiEdit, Edit, and Bash
+- `.mistral/commands/prime.md` - Additional command (if present)  
+- `.mistral/settings.json` - Permissions configuration
+
+**For Real Mistral Code**: Install the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=mistralai.mistral-code) or [JetBrains plugin](https://plugins.jetbrains.com/plugin/27493-mistral-code-enterprise).
 
 ### Specification-Driven Generation
 - Specifications in `specs/` directory define what type of content to generate

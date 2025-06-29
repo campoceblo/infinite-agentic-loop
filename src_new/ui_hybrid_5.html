@@ -1,0 +1,193 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Garden Search Hub</title>
+    <style>
+        /* Cohesive theme implementation across all component aspects */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        main {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .hybrid-component {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .hybrid-component:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .search-bar button {
+            border: none;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .search-bar button:hover {
+            background: #45a049;
+        }
+        .autocomplete {
+            display: none;
+            flex-direction: column;
+            border-top: 1px solid #eee;
+        }
+        .autocomplete div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .autocomplete div:hover {
+            background: #f0f0f0;
+        }
+        .recent-items {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #eee;
+        }
+        .recent-items div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .recent-items div:hover {
+            background: #f0f0f0;
+        }
+        .filters {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #eee;
+        }
+        .filters div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .filters div:hover {
+            background: #f0f0f0;
+        }
+        .results-preview {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #eee;
+        }
+        .results-preview div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .results-preview div:hover {
+            background: #f0f0f0;
+        }
+
+        @media (max-width: 600px) {
+            .hybrid-component {
+                width: 100%;
+            }
+            .search-bar button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Search Hub - Zen Garden Theme</h1>
+
+        <!-- The themed hybrid component showcasing combined functionality -->
+        <div class="hybrid-component">
+            <!-- Multiple UI functions integrated into single component -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." oninput="handleInput(event)">
+                <button onclick="performSearch()">Search</button>
+            </div>
+            <div class="autocomplete" id="autocomplete">
+                <!-- Autocomplete suggestions will appear here -->
+            </div>
+            <div class="recent-items">
+                <div>Recent Search 1</div>
+                <div>Recent Search 2</div>
+                <div>Recent Search 3</div>
+            </div>
+            <div class="filters">
+                <div>Filter 1</div>
+                <div>Filter 2</div>
+                <div>Filter 3</div>
+            </div>
+            <div class="results-preview" id="results-preview">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+
+        <!-- Additional examples if needed to show different states/modes -->
+
+    </main>
+
+    <script>
+        // Coordinated behavior across all integrated UI functions
+        function handleInput(event) {
+            const value = event.target.value;
+            if (value.length > 2) {
+                document.getElementById('autocomplete').style.display = 'flex';
+                // Simulate autocomplete suggestions
+                document.getElementById('autocomplete').innerHTML = `
+                    <div>Suggestion 1 for ${value}</div>
+                    <div>Suggestion 2 for ${value}</div>
+                    <div>Suggestion 3 for ${value}</div>
+                `;
+            } else {
+                document.getElementById('autocomplete').style.display = 'none';
+            }
+        }
+
+        function performSearch() {
+            // Simulate search results
+            document.getElementById('results-preview').innerHTML = `
+                <div>Result 1</div>
+                <div>Result 2</div>
+                <div>Result 3</div>
+            `;
+        }
+    </script>
+</body>
+</html>
+```

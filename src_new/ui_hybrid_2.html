@@ -1,0 +1,209 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceanic Tides Interactive Dashboard</title>
+    <style>
+        /* Cohesive theme implementation across all component aspects */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0077be, #00c6ff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .hybrid-component {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00c6ff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-bar button:hover {
+            background: #0099cc;
+        }
+        .results-list {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .results-list li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .results-list li:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .file-upload {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .file-upload input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        .file-upload button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00c6ff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .file-upload button:hover {
+            background: #0099cc;
+        }
+        .progress-bar {
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .progress-bar div {
+            height: 100%;
+            background: #00c6ff;
+            width: 0;
+            transition: width 0.3s;
+        }
+        .preview-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .preview-area img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        /* Multi-component integration with seamless visual flow */
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Interactive Dashboard - Oceanic Tides Theme</h1>
+
+        <!-- The themed hybrid component showcasing combined functionality -->
+        <div class="hybrid-component">
+            <!-- Multiple UI functions integrated into single component -->
+            <!-- Realistic demo data showing all combined features working -->
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button onclick="performSearch()">Search</button>
+            </div>
+            <ul class="results-list" id="resultsList">
+                <li onclick="selectResult('Result 1')">Result 1</li>
+                <li onclick="selectResult('Result 2')">Result 2</li>
+                <li onclick="selectResult('Result 3')">Result 3</li>
+            </ul>
+
+            <div class="file-upload">
+                <input type="file" id="fileInput">
+                <button onclick="uploadFile()">Upload</button>
+            </div>
+            <div class="progress-bar" id="progressBar">
+                <div id="progressFill"></div>
+            </div>
+            <div class="preview-area" id="previewArea">
+                <img id="previewImage" src="" alt="Preview">
+            </div>
+        </div>
+
+        <!-- Additional examples if needed to show different states/modes -->
+
+    </main>
+
+    <script>
+        // Coordinated behavior across all integrated UI functions
+        // Theme-consistent animations and interactions
+        // Smart state management for multiple component functions
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            // Simulate search results
+            const resultsList = document.getElementById('resultsList');
+            resultsList.innerHTML = `
+                <li onclick="selectResult('Result for ${query} 1')">Result for ${query} 1</li>
+                <li onclick="selectResult('Result for ${query} 2')">Result for ${query} 2</li>
+                <li onclick="selectResult('Result for ${query} 3')">Result for ${query} 3</li>
+            `;
+        }
+
+        function selectResult(result) {
+            alert(`Selected: ${result}`);
+        }
+
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file) {
+                // Simulate file upload progress
+                const progressFill = document.getElementById('progressFill');
+                let width = 0;
+                const interval = setInterval(() => {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                        showPreview(file);
+                    } else {
+                        width++;
+                        progressFill.style.width = width + '%';
+                    }
+                }, 30);
+            }
+        }
+
+        function showPreview(file) {
+            const previewImage = document.getElementById('previewImage');
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>
+```

@@ -5,4 +5,4 @@ RUN:
 
 READ:
     README.md
-    ai_docs/claude_code_fresh_tutorials.md
+    ai_docs/mistral_code_fresh_tutorials.md

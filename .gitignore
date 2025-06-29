@@ -1,0 +1,10 @@
+# Add .env to gitignore for security
+.env
+node_modules/
+*.log
+.DS_Store
+.vscode/settings.json
+dist/
+build/
+temp/
+.tmp/

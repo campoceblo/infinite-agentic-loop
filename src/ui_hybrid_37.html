@@ -1,0 +1,168 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Navigator Dashboard Widget</title>
+    <style>
+        /* Cohesive theme implementation across all component aspects */
+        /* Multi-component integration with seamless visual flow */
+        body {
+            background: radial-gradient(circle at center, #000220, #001144);
+            color: #ffffff;
+            font-family: 'Exo', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        main {
+            text-align: center;
+        }
+        .hybrid-component {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 100%;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+        .chart {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .filter-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .action-button {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .action-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .alerts {
+            margin-top: 20px;
+        }
+        .alert-item {
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Celestial Navigator Dashboard Widget - Space Exploration Theme</h1>
+
+        <!-- The themed hybrid component showcasing combined functionality -->
+        <div class="hybrid-component">
+            <!-- Chart + filter + export + refresh + settings + alerts -->
+            <div class="chart-container">
+                <div class="chart" id="celestialChart"></div>
+            </div>
+            <div class="filters">
+                <div class="filter-item" id="timeFilter">Time</div>
+                <div class="filter-item" id="regionFilter">Region</div>
+                <div class="filter-item" id="typeFilter">Type</div>
+            </div>
+            <div class="actions">
+                <button class="action-button" id="exportButton">Export</button>
+                <button class="action-button" id="refreshButton">Refresh</button>
+                <button class="action-button" id="settingsButton">Settings</button>
+            </div>
+            <div class="alerts">
+                <div class="alert-item" id="alert1">Critical Event Detected</div>
+                <div class="alert-item" id="alert2">System Update Required</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Coordinated behavior across all integrated UI functions
+        // Theme-consistent animations and interactions
+        // Smart state management for multiple component functions
+
+        document.getElementById('timeFilter').addEventListener('click', function() {
+            alert('Time filter applied');
+        });
+
+        document.getElementById('regionFilter').addEventListener('click', function() {
+            alert('Region filter applied');
+        });
+
+        document.getElementById('typeFilter').addEventListener('click', function() {
+            alert('Type filter applied');
+        });
+
+        document.getElementById('exportButton').addEventListener('click', function() {
+            alert('Data exported');
+        });
+
+        document.getElementById('refreshButton').addEventListener('click', function() {
+            alert('Data refreshed');
+        });
+
+        document.getElementById('settingsButton').addEventListener('click', function() {
+            alert('Settings opened');
+        });
+
+        // Simulated chart rendering
+        const chart = document.getElementById('celestialChart');
+        chart.innerHTML = '<canvas id="chartCanvas"></canvas>';
+        const ctx = document.getElementById('chartCanvas').getContext('2d');
+        const celestialChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Celestial Data',
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    borderColor: 'rgba(255, 255, 255, 0.8)',
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+```

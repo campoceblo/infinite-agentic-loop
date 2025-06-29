@@ -1,0 +1,156 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Navigator - Stellar Exploration Theme</title>
+    <style>
+        /* Cohesive theme implementation across all component aspects */
+        body {
+            background-color: #0a0a23;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hybrid-component {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .autocomplete-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .autocomplete-list li {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #ffd700;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .filter-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            padding: 10px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .results-preview {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            padding: 10px;
+            height: 150px;
+            overflow-y: auto;
+        }
+
+        /* Multi-component integration with seamless visual flow */
+        .results-preview::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .results-preview::-webkit-scrollbar-thumb {
+            background: #ffd700;
+            border-radius: 5px;
+        }
+
+        .results-preview::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Celestial Navigator - Stellar Exploration Theme</h1>
+
+        <!-- The themed hybrid component showcasing combined functionality -->
+        <div class="hybrid-component">
+            <!-- Multiple UI functions integrated into single component -->
+            <input type="text" class="search-bar" placeholder="Search the cosmos...">
+            <ul class="autocomplete-list">
+                <li>Andromeda Galaxy</li>
+                <li>Orion Nebula</li>
+                <li>Pleiades Star Cluster</li>
+            </ul>
+            <div class="filters">
+                <button class="filter-button">Galaxies</button>
+                <button class="filter-button">Nebulas</button>
+                <button class="filter-button">Star Clusters</button>
+            </div>
+            <div class="results-preview">
+                <p>Search results will appear here...</p>
+            </div>
+            <!-- Realistic demo data showing all combined features working -->
+        </div>
+
+        <!-- Additional examples if needed to show different states/modes -->
+
+    </main>
+
+    <script>
+        // Coordinated behavior across all integrated UI functions
+        // Theme-consistent animations and interactions
+        // Smart state management for multiple component functions
+        document.querySelector('.search-bar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const items = document.querySelectorAll('.autocomplete-list li');
+            items.forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(query) ? 'list-item' : 'none';
+            });
+        });
+
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.textContent.toLowerCase();
+                const items = document.querySelectorAll('.autocomplete-list li');
+                items.forEach(item => {
+                    item.style.display = item.textContent.toLowerCase().includes(filter) ? 'list-item' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+```

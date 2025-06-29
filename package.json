@@ -1,0 +1,36 @@
+{
+  "name": "infinite-agentic-loop-mistral",
+  "version": "1.0.0",
+  "description": "Infinite Agentic Loop implementation using MistralAI APIs",
+  "main": "src/infinite-loop.js",
+  "type": "module",  "scripts": {
+    "start": "node src/infinite-loop.js",
+    "single": "node src/infinite-loop.js specs/invent_new_ui_v3.md src 1",
+    "batch": "node src/infinite-loop.js specs/invent_new_ui_v3.md src_new 5",
+    "large-batch": "node src/infinite-loop.js specs/invent_new_ui_v3.md src_new 20",
+    "infinite": "node src/infinite-loop.js specs/invent_new_ui_v3.md infinite_src_new infinite",
+    "test": "node test.js",
+    "preview": "node preview.js",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "@mistralai/mistralai": "^1.1.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "p-limit": "^5.0.0",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "keywords": [
+    "mistralai",
+    "ai",
+    "automation",
+    "infinite-loop",
+    "multi-agent"
+  ],
+  "author": "Infinite Agentic Loop Project",
+  "license": "MIT"
+}
